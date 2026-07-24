@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.14",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.flake8", "ms-python.black-formatter", "charliermarsh.ruff", "redhat.vscode-yaml"]
+    }
+  }
+}

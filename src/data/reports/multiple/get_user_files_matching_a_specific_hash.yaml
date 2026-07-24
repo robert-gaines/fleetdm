@@ -1,0 +1,30 @@
+---
+created_at: '2025-05-25T18:08:30Z'
+updated_at: '2025-05-25T18:08:30Z'
+id: 25
+fleet_id: null
+interval: 0
+platform: darwin, linux
+min_osquery_version: ''
+automations_enabled: false
+logging: snapshot
+name: Get user files matching a specific hash
+description: Looks for specific hash in the Users/ directories for files that are
+  less than 50MB (osquery file size limitation.)
+query: SELECT path, sha256 FROM hash WHERE path IN (SELECT path FROM file WHERE size
+  < 50000000 AND path LIKE '/Users/%/Documents/%%') AND sha256 = '16d28cd1d78b823c4f961a6da78d67a8975d66cde68581798778ed1f98a56d75';
+saved: true
+observer_can_run: false
+author_id: 1
+author_name: administrator
+author_email: administrator@internal.subterfuge.biz
+packs: []
+stats:
+  system_time_p50: null
+  system_time_p95: null
+  user_time_p50: null
+  user_time_p95: null
+  total_executions: 0
+discard_data: false
+labels_include_any: null
+labels_include_all: null

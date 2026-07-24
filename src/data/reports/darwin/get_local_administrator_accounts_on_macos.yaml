@@ -1,0 +1,28 @@
+---
+created_at: '2025-05-25T18:08:30Z'
+updated_at: '2025-05-25T18:08:30Z'
+id: 26
+fleet_id: null
+interval: 0
+platform: darwin
+min_osquery_version: ''
+automations_enabled: false
+logging: snapshot
+name: Get local administrator accounts on macOS
+description: The query allows you to check macOS systems for local administrator accounts.
+query: SELECT uid, username, type FROM users u JOIN groups g ON g.gid = u.gid;
+saved: true
+observer_can_run: false
+author_id: 1
+author_name: administrator
+author_email: administrator@internal.subterfuge.biz
+packs: []
+stats:
+  system_time_p50: null
+  system_time_p95: null
+  user_time_p50: null
+  user_time_p95: null
+  total_executions: 0
+discard_data: false
+labels_include_any: null
+labels_include_all: null

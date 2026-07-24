@@ -1,0 +1,29 @@
+---
+created_at: '2025-05-25T18:08:30Z'
+updated_at: '2025-05-25T18:08:30Z'
+id: 41
+fleet_id: null
+interval: 0
+platform: windows
+min_osquery_version: ''
+automations_enabled: false
+logging: snapshot
+name: Get antivirus status from the Windows Security Center
+description: Selects the antivirus and signatures status from Windows Security Center.
+query: SELECT antivirus, signatures_up_to_date from windows_security_center CROSS
+  JOIN windows_security_products WHERE type = 'Antivirus';
+saved: true
+observer_can_run: false
+author_id: 1
+author_name: administrator
+author_email: administrator@internal.subterfuge.biz
+packs: []
+stats:
+  system_time_p50: null
+  system_time_p95: null
+  user_time_p50: null
+  user_time_p95: null
+  total_executions: 0
+discard_data: false
+labels_include_any: null
+labels_include_all: null

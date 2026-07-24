@@ -1,0 +1,29 @@
+---
+created_at: '2025-05-25T18:08:30Z'
+updated_at: '2025-05-25T18:08:30Z'
+id: 23
+fleet_id: null
+interval: 0
+platform: darwin, linux, windows
+min_osquery_version: ''
+automations_enabled: false
+logging: snapshot
+name: Get local users and their privileges
+description: Collects the local user accounts and their respective user group.
+query: SELECT uid, username, type, groupname FROM users u JOIN groups g ON g.gid =
+  u.gid;
+saved: true
+observer_can_run: false
+author_id: 1
+author_name: administrator
+author_email: administrator@internal.subterfuge.biz
+packs: []
+stats:
+  system_time_p50: 0
+  system_time_p95: 0
+  user_time_p50: 0
+  user_time_p95: 0
+  total_executions: 4
+discard_data: false
+labels_include_any: null
+labels_include_all: null
