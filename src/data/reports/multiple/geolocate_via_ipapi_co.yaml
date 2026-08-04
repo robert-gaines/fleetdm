@@ -22,11 +22,11 @@ author_name: administrator
 author_email: administrator@internal.subterfuge.biz
 packs: []
 stats:
-  system_time_p50: null
-  system_time_p95: null
-  user_time_p50: null
-  user_time_p95: null
-  total_executions: 0
+  system_time_p50: 16
+  system_time_p95: 16
+  user_time_p50: 0
+  user_time_p95: 0
+  total_executions: 2
 discard_data: false
 labels_include_any: null
 labels_include_all: null

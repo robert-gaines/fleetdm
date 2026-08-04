@@ -116,7 +116,34 @@ class Methods:
             logger.exception("Exception raised")
             return 0
 
+    def _execute_post_request_return_data(self, path: str, payload: str) -> dict:
+        try:
+            response = self.session.post(url=f"{self.url}{path}",
+                                         headers=self.headers,
+                                         data=payload,
+                                         verify=False)
+            return response.json()
+        except requests.RequestException:
+            logger.exception("Exception raised")
+            return {}
 
-    
+    def _execute_patch_request(self, path: str, payload: str) -> int:
+        try:
+            response = self.session.patch(url=f"{self.url}{path}",
+                                          headers=self.headers,
+                                          data=payload,
+                                          verify=False)
+            return response.status_code
+        except requests.RequestException:
+            logger.exception("Exception raised")
+            return 0
 
-    
+    def _execute_delete_request(self, path) -> int:
+        try:
+            response = self.session.delete(url=f"{self.url}{path}",
+                                           headers=self.headers,
+                                           verify=False)
+            return response.status_code
+        except requests.RequestException:
+            logger.exception("Exception raised")
+            return 0

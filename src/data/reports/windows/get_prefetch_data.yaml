@@ -1,0 +1,28 @@
+---
+created_at: '2026-08-04T22:16:41Z'
+updated_at: '2026-08-04T22:28:04Z'
+id: 52
+fleet_id: null
+interval: 0
+platform: windows
+min_osquery_version: ''
+automations_enabled: false
+logging: snapshot
+name: Get Prefetch Data
+description: Returns prefetch data for Windows hosts
+query: select * from prefetch
+saved: true
+observer_can_run: false
+author_id: 2
+author_name: fleetdm-automation
+author_email: administrator+aEjRQT7rUG0SCg==@internal.subterfuge.biz
+packs: []
+stats:
+  system_time_p50: null
+  system_time_p95: null
+  user_time_p50: null
+  user_time_p95: null
+  total_executions: null
+discard_data: false
+labels_include_any: null
+labels_include_all: null
